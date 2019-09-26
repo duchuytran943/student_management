@@ -1,0 +1,22 @@
+{
+  "name": "student_management",
+  "version": "1.0.0",
+  "description": "This project is for studying javascript basic.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duchuytran943/Student_management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duchuytran943/Student_management/issues"
+  },
+  "homepage": "https://github.com/duchuytran943/Student_management#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
