@@ -20,6 +20,16 @@ function showStudents() {
     }
 }
 
+function showCreateStudent() {
+    var name = readlineSync.question('Name: ');
+    var age = readlineSync.question('Age: ');
+    var student = {
+        name: name,
+        age: parseInt(age)
+    };
+    students.push(student);
+}
+
 function main() {
     loadData();
     // console.log(students);
@@ -31,6 +41,7 @@ function main() {
             break;
         case '2':
             showCreateStudent();
+            console.log(students);
             break;
         case '3':
             saveAndExit();
