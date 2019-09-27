@@ -12,6 +12,26 @@ function showMenu() {
     console.log('1. Show all students');
     console.log('2. Create a new student');
     console.log('3. Save and Exit');
+    var option = readlineSync.question('>');
+    switch (option) {
+        case '1':
+            showStudents();
+            showMenu();
+            break;
+        case '2':
+            showCreateStudent();
+            // console.log(students);
+            showMenu();
+            break;
+        case '3':
+            saveAndExit();
+            break;
+
+        default:
+            console.log('Wrong option');
+            showMenu();
+            break;
+    }
 }
 
 function showStudents() {
@@ -30,28 +50,16 @@ function showCreateStudent() {
     students.push(student);
 }
 
+function saveAndExit() {
+    var content = JSON.stringify(students);
+    // console.log(content);
+    fs.writeFileSync('./data.json', content, {encoding: 'utf-8'});
+}
+
 function main() {
     loadData();
     // console.log(students);
     showMenu();
-    var option = readlineSync.question('>');
-    switch (option) {
-        case '1':
-            showStudents();
-            break;
-        case '2':
-            showCreateStudent();
-            console.log(students);
-            break;
-        case '3':
-            saveAndExit();
-            break;
-    
-        default:
-            console.log('Wrong option');
-            break;
-    }
-
 }
 
 main();

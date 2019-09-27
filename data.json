@@ -1,10 +1,1 @@
-[   
-    {
-        "name": "Huy",
-        "age": "26"
-    },
-    {
-        "name": "Linh",
-        "age": "20"
-    }
-]
+[{"name":"Huy","age":26},{"name":"Linh","age":20},{"name":"hieu","age":28},{"name":"cu","age":38},{"name":"he","age":90},{"name":"minh","age":19},{"name":"tuan","age":26}]
